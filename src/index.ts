@@ -1,11 +1,8 @@
-import { Context, Schema } from 'koishi'
+import { Context, Service } from 'koishi'
+// export * from './send'
 
-export const name = 'utils'
-
-export interface Config {}
-
-export const Config: Schema<Config> = Schema.object({})
-
-export function apply(ctx: Context) {
-  // write your plugin here
+export default class Utils extends Service {
+  constructor(ctx: Context) {
+    super(ctx, '@hieuzest/utils')
+  }
 }
